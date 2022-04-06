@@ -13,7 +13,7 @@ const Product = ({
       {starred ? (
         <button
           className="btn btn-outline-warning"
-          title="Add to starred"
+          title="Remove from starred"
           onClick={() =>
             actions.updateStarredFlag({ id, data: { starred: false } })
           }
@@ -23,7 +23,7 @@ const Product = ({
       ) : (
         <button
           className="btn btn-outline-secondary"
-          title="Remove from starred"
+          title="Add to starred"
           onClick={() =>
             actions.updateStarredFlag({ id, data: { starred: true } })
           }

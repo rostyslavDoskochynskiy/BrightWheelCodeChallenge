@@ -4,7 +4,7 @@ const Animal = ({ id, type, name, taxonomy, image, starred, actions }) => (
       {starred ? (
         <button
           className="btn btn-outline-warning"
-          title="Add to starred"
+          title="Remove from starred"
           onClick={() =>
             actions.updateStarredFlag({ id, data: { starred: false } })
           }
@@ -14,7 +14,7 @@ const Animal = ({ id, type, name, taxonomy, image, starred, actions }) => (
       ) : (
         <button
           className="btn btn-outline-secondary"
-          title="Remove from starred"
+          title="Add from starred"
           onClick={() =>
             actions.updateStarredFlag({ id, data: { starred: true } })
           }
